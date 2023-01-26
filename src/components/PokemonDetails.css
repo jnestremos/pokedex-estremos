@@ -1,0 +1,54 @@
+header{
+    width: 100%;
+    text-align: center;
+    margin-bottom:1em;
+    position: relative;
+}
+header h3{
+    font-size: 1.5rem;
+}
+.details-main-image{
+    width: 100%;
+    /* margin: 0 auto; */
+    border-radius: 10px;
+    background: lightgreen;
+    padding: 1em;
+    margin-bottom:2em;
+}
+.details-main-info{
+    margin-bottom: 1em;
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+.details-main-info div{
+    display: flex;
+    align-items: baseline;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: lightgreen;
+}
+.arrow-left{
+    position:absolute;
+    top: 6%;
+    font-size: 1.4rem;    
+}
+.arrow-left:hover{
+    transition: 0.15s ease-in all;
+    color: red;
+}
+
+@media only screen and (min-width: 768px){
+    .details-main-image{
+        width:50%;
+        margin-left: auto;
+        margin-right: auto;
+    }    
+}
+
+@media only screen and (min-width: 1440px){
+    .details-main-image{
+        width:40%;        
+    }    
+}

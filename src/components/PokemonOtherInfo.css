@@ -1,0 +1,113 @@
+.other-info ul{
+    display:grid;   
+    grid-template-columns: repeat(5, 1fr);     
+    gap: 1em;      
+    overflow-x: scroll; 
+    margin-bottom: 1em;
+    scrollbar-width: none;
+}
+
+.other-info ul::-webkit-scrollbar{
+    display:none
+}
+
+.other-info li{    
+    padding: 1em;
+    text-align: center;
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+
+.other-info li:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+
+.other-info li.active{
+    background-color: grey;
+}
+
+/* .pokemon-forms{    
+    display:grid;
+    width:100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+} */
+.pokemon-forms img{
+    border-radius: 10px;    
+    /* padding: 0.5em; */
+    background-color: lightgreen;
+}
+
+.pokemon-stats, .pokemon-types, .pokemon-abilities, .pokemon-forms{
+    /* background-color: lightgreen; */
+    border-radius: 10px;
+    padding: 1em;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    font-size: 0.5rem;
+}
+.pokemon-stats div{
+    display: flex;
+    align-items: baseline;    
+}
+.pokemon-type, .pokemon-ability{
+    padding: 1em;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+    border-radius: 10px;
+}
+.pokemon-evolution{
+    display:flex;
+    justify-content: flex-start;
+    text-align: center;
+    overflow-x: scroll;
+}
+.pokemon-evolution a{
+    margin-right: 10px;
+    padding: 1em;
+    /* flex:50%; */
+    /* width:200px; */
+    border-radius: 10px;
+    background-color: lightgreen;    
+}
+.pokemon-evolution a:nth-last-of-type(1){
+    margin-right: 0px;
+}
+
+@media only screen and (min-width: 768px){
+    .pokemon-forms{
+        width: 60%;
+        margin: 0 auto;
+    }
+    .pokemon-evolution{
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .pokemon-forms{
+        width: 40%;        
+    }
+    .pokemon-evolution{
+        width: 60%;    
+    }
+    .pokemon-types, .pokemon-abilities{
+        width:70%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .pokemon-types, .pokemon-abilities{
+        width:60%;       
+    }
+    .pokemon-forms{
+        width: 30%;        
+    }
+}
