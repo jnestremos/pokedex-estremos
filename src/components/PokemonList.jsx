@@ -6,7 +6,7 @@ function PokemonList({ pokemons, handleRemovePokemon }) {
     <ul className='pokemon-list'>
         {pokemons.map((pokemon, index) => {
           const id = pokemon.url.split('/').at(-2)
-          console.log(id)
+          // console.log(id)
           const name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
             return(
               <li key={index}>

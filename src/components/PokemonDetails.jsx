@@ -4,8 +4,8 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
 function PokemonDetails({ pokemon, evolutionChain, setName }) {    
-    console.log(pokemon)   
-    console.log(evolutionChain)   
+    // console.log(pokemon)   
+    // console.log(evolutionChain)   
     const name = (pokemon?.name?.charAt(0).toUpperCase() + pokemon?.name?.slice(1)).toString()
     const imageSrc = pokemon?.sprites?.other['official-artwork']?.front_default    
     return (

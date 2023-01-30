@@ -13,7 +13,7 @@ function Home() {
     const fetchPokemons = async () => {
         // https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20
         const res = await axiosClient.get('/pokemon/')
-        console.log(res.data.results)
+        // console.log(res.data.results)
         // setPokemons(res.data.results)
         localStorage.setItem('pokemons', JSON.stringify(res.data.results));
         setPokemons(JSON.parse(localStorage.getItem('pokemons')))
@@ -26,7 +26,7 @@ function Home() {
                 // https://pokeapi.co/api/v2/pokemon/1/
                 const pokemon = res.data
                 const url = `https://pokeapi.co/api/v2/pokemon/${pokemon.id}/`
-                console.log(url)
+                // console.log(url)
                 const newPokemon = {
                     name: pokemon.name,
                     url
@@ -50,7 +50,7 @@ function Home() {
     function handleSetQuery(queryValue){
     //  query = queryValue
         setQuery(queryValue)
-        console.log(queryValue)
+        // console.log(queryValue)
         const re = new RegExp(`^${queryValue}`, 'mi')
         const pokemons = JSON.parse(localStorage.getItem('pokemons'))
         const filteredPokemons = pokemons.filter((pokemon) => re.test(pokemon.name))
